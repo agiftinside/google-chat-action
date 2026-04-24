@@ -8,3 +8,6 @@ MD029:
 
 # Disable line length check
 MD013: false
+
+# Disable table column alignment check
+MD060: false
