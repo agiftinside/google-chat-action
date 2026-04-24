@@ -2,6 +2,8 @@
 
 Github action to send Cards V2 to the google chat via webhook.
 
+> **Note:** This action requires Node.js 24 (`runs.using: node24`) and a minimum GitHub Actions Runner version of [v2.327.1](https://github.com/actions/runner/releases/tag/v2.327.1). If you are using self-hosted runners, ensure they are updated before upgrading.
+
 ## Quick start
 
 ![Bare Minimum Google Chat Card](./docs/bare-minimum-card.png)
