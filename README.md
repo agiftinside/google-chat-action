@@ -123,26 +123,26 @@ How an `additionalSections` array has to look like can be found here: <https://d
 
 You can also refer to the [action.yml](https://github.com/SimonScholz/google-chat-action/blob/main/action.yml).
 
-| Property                    | Description                                                                                                                                                                                                      | Default           | Required |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------: | :------: |
-| webhookUrl                  | The webhook URL of the Google Chat. Should be stored in an action secret.                                                                                                                                        | 🚫                | ✅       |
-| jobStatus                   | The optional jobStatus. Values can be success, failure, cancelled. You should pass `${{ job.status }}` here.                                                                                                     | 🚫                | 🚫       |
-| title                       | Optional title. If not set, it defaults to the action name                                                                                                                                                       | Action name       | 🚫       |
-| subtitle                    | Optional subtitle. If not set, the subtitle will not be shown.                                                                                                                                                   | 🚫 (invisible)    | 🚫       |
-| imageUrl                    | Optional icon. If not set, no icon will be shown.                                                                                                                                                                | 🚫                | 🚫       |
-| imageType                   | Optional imageType (imageUrl must be set for this). Possible values are SQUARE and CIRCLE.                                                                                                                       | CIRCLE            | 🚫       |
-| imageAltText                | Optional imageAltText. Alternative in case the image cannot be shown.                                                                                                                                            | 🚫                | 🚫       |
-| createDefaultSection        | Optional createSection. Specify whether the default section should be shown or not.                                                                                                                              | true              | 🚫       |
-| collapsibleDefaultSection   | Optional collapsibleSection. Specify whether the section is collapsible.                                                                                                                                         | false             | 🚫       |
-| uncollapsibleWidgetsCount   | Optional uncollapsibleWidgetsCount. Specify the amount of uncollapsible widgets within the sections.                                                                                                             | 4                 | 🚫       |
-| additionalSections          | Add the opportunity to have additional sections. Also see [Google Chat Card V2](https://developers.google.com/chat/api/reference/rest/v1/cards#section) sections array.                                          | 🚫                | 🚫       |
-| threadKey                   | Create or reply to a thread identified by this value. For replying to a thread this message must be sent by the same Google Chat user as the initial message. Also see [Google Chat Message Thread](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages#Thread). | 🚫 | 🚫 |
-| threadName                  | Reply to a thread regardless of the user that initially created it. Also see [Google Chat Message Thread](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages#Thread). Takes precedence over threadKey. | 🚫 | 🚫 |
+| Property      | Description                     |  Default  | Required   |
+| ------------- | ------------------------------- | :-------: | :--------: |
+| webhookUrl    | The webhook URL of the Google Chat. Should be stored in an action secret. | 🚫 |    ✅      |
+| jobStatus     | The optional jobStatus. Values can be success, failure, cancelled. You should pass `${{ job.status }}` here. | 🚫  |    🚫      |
+| title         | Optional title. If not set, it defaults to the action name | Action name |    🚫      |
+| subtitle      | Optional subtitle. If not set, the subtitle will not be shown. | 🚫 (invisible) |   🚫      |
+| imageUrl      | Optional icon. If not set, no icon will be shown. | 🚫 |    🚫      |
+| imageType     | Optional imageType (imageUrl must be set for this). Possible values are SQUARE and CIRCLE. | CIRCLE |    🚫      |
+| imageAltText  | Optional imageAltText. Alternative in case the image cannot be shown. | 🚫  |    🚫      |
+| createDefaultSection | Optional createSection. Specify whether the default section should be shown or not. | true  |    🚫      |
+| collapsibleDefaultSection | Optional collapsibleSection. Specify whether the section is collapsible.  | false |   🚫      |
+| uncollapsibleWidgetsCount | Optional uncollapsibleWidgetsCount. Specify the amount of uncollapsible widgets within the sections. | 4 |   🚫      |
+| additionalSections |  Add the opportunity to have additional sections. Also see [Google Chat Card V2](https://developers.google.com/chat/api/reference/rest/v1/cards#section) sections array. | 🚫 |    🚫      |
+| threadKey |  Create or reply to a thread identified by this value. For replying to a thread this message must be sent by the same Google Chat user as the initial message. Also see [Google Chat Message Thread](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages#Thread). | 🚫 |    🚫      |
+| threadName |  Reply to a thread regardless of the user that initially created it. Also see [Google Chat Message Thread](https://developers.google.com/chat/api/reference/rest/v1/spaces.messages#Thread). Takes precedence over threadKey. | 🚫 |    🚫      |
 
 ## Outputs
 
-| Output     | Description                                                                                                                                          |
-| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Output     | Description   |
+| ---------- | --------------|
 | threadName | Name of thread created by this message. Can be used as input "threadName" for subsequent calls to this action to have follow-up messages in a thread. |
 
 ## Contributing
