@@ -5,3 +5,9 @@ MD004:
 # Ordered list item prefix
 MD029:
   style: one
+
+# Disable line length check
+MD013: false
+
+# Disable table column alignment check
+MD060: false

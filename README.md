@@ -2,13 +2,14 @@
 
 Github action to send Cards V2 to the google chat via webhook.
 
+> **Note:** This action requires Node.js 24 (`runs.using: node24`) and a minimum GitHub Actions Runner version of [v2.327.1](https://github.com/actions/runner/releases/tag/v2.327.1). If you are using self-hosted runners, ensure they are updated before upgrading.
+
 ## Quick start
 
 ![Bare Minimum Google Chat Card](./docs/bare-minimum-card.png)
 
 You'll get this bare minimum Google Chat card in case you only specify the required input, which is the `webhookUrl`.
 In order to obtain this `webhookUrl` you need to click on the desired Google Chat, go to "Apps & Integrations" and then click on the "+ Add webhooks" button.
-
 
 ```yaml
 name: Send Message to Google Chat
@@ -118,7 +119,7 @@ Due to setting `createDefaultSection` and `collapsibleDefaultSection` to false t
 
 With the `additionalSections` you also gain a lot freedom and also other actions could come up with something suitable like my [postman-newman-action](https://github.com/SimonScholz/postman-newman-action) does when setting its `outputGoogleCardV2` input property to true.
 
-How an `additionalSections` array has to look like can be found here: https://developers.google.com/chat/api/reference/rest/v1/cards#section 
+How an `additionalSections` array has to look like can be found here: <https://developers.google.com/chat/api/reference/rest/v1/cards#section>
 
 ## Inputs
 
